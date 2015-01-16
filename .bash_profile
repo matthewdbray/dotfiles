@@ -1,4 +1,5 @@
 alias ki='/usr/local/krb5/bin/pkinit mdbray@HPCMP.HPC.MIL'
+alias kk='/usr/local/krb5/bin/kinit mdbray@HPCMP.HPC.MIL' 
 alias shell='/usr/local/ossh/bin/ssh -X mdbray@garnet.erdc.hpc.mil'
 alias huey='/usr/local/ossh/bin/ssh -X mdbray@us1.erdc.hpc.mil'
 alias sftp='/usr/local/ossh/bin/sftp mdbray@garnet.erdc.hpc.mil'
@@ -10,26 +11,20 @@ alias ll='ls -ll'
 alias restart='sudo shutdown -r now'
 alias get_h5='sudo /usr/bin/get_h5.sh'
 alias get_h5_surf='sudo /usr/bin/get_h5_surf.sh'
-alias vim='/Applications/MacVim.app/Contents/MacOS/vim'
-alias pvpython='/Applications/CMB\ Suite\ 1.7.0/bin/pvpython'
-alias get_dirs='sudo /usr/bin/get_dirs.sh'
 alias xdmf_concat='python /Users/matthewbray/Desktop/Python/xdmf_concat.py'
 alias AsciiToXdmf='python /Users/matthewbray/Desktop/Python/AsciiToXdmf.py'
-alias fix_csv='python /usr/bin/fix_csv.py' 
 alias j_sftp='/usr/local/ossh/bin/sftp mdbray@jade01.erdc.hpc.mil'
 alias jade='/usr/local/ossh/bin/ssh -X mdbray@jade01.erdc.hpc.mil'
 alias diamond='/usr/local/ossh/bin/ssh -X mdbray@diamond01.erdc.hpc.mil'
 alias d_sftp='/usr/local/ossh/bin/sftp mdbray@diamond01.erdc.hpc.mil'
 alias copper='/usr/local/ossh/bin/ssh -X mdbray@copper01.ors.hpc.mil'
 alias c_sftp='/usr/local/ossh/bin/sftp mdbray@copper01.ors.hpc.mil'
-alias dosbox='/Applications/DOSBox.app/Contents/MacOS/DOSBox -c "MOUNT e ~/Dropbox/P23X" -c "E:" -c "DBSET.BAT" -c "CVSET" -c "cd ASSEMBLY"'
 alias cdg='cd /Users/matthewbray/Desktop/Geosites/'
 alias scp='/usr/local/ossh/bin/scp'
-alias cdv='cd ~/PycharmProjects/veg_input/'
-alias cdw='cd ~/WorkDir/Airfield/sim_dir'
 alias cda='cd ~/git/apod-dev/src/'
+alias ipy='ipython notebook --pylab=inline'
 
-#export PS1='\[\e[0;31m\]\u\[\e[0m\][\e[1;31m\]@\[\e[0m\]\[\e[0;31m\]\H\[\e[0m\]] \w $ '
+export PS1='\[\e[0;31m\]\u\[\e[0m\][\e[1;31m\]@\[\e[0m\]\[\e[0;31m\]\H\[\e[0m\]] \w $ '
 fancy_prompt() {
    local blue =$(tput setaf 4)
    local purple=$(tput setaf 5)
@@ -68,7 +63,6 @@ export PYTHONPATH=$PYTHONPATH:./bin
 PATH=$PATH:.:$scripting/$MACHINE_TYPE/bin
 export PATH
 #export PATH=/usr/local/bin:$PATH
-export PATH=$PATH:/Users/matthewbray/usr/local/bin
 export scripting=$HOME/scripting
 #PATH="/opt/local/Library/Frameworks/Python.framework/Versions/2.7/bin:${PATH}"
 #export PATH
@@ -96,10 +90,10 @@ export MKL_NUM_THREADS
 #source /Users/matthewbray/Library/Enthought/Canopy_64bit/User/bin/activate
 
 # added by Anaconda 1.6.1 installer
-#export PATH="/Users/matthewbray/anaconda/bin:$PATH"
+# export PATH="/Users/matthewbray/anaconda/bin:$PATH"
 
-##
-# Your previous /Users/matthewbray/.bash_profile file was backed up as /Users/matthewbray/.bash_profile.macports-saved_2014-04-03_at_15:00:24
-##
-export PATH=/usr/local/bin:$PATH
+# added by Anaconda 2.1.0 installer
+# export PATH="/Users/matthewbray/anaconda/bin:$PATH"
+
+export PATH=/Users/matthewbray/usr/local/bin:$PATH
 export PATH=./:$PATH
